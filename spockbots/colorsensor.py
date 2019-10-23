@@ -18,7 +18,13 @@ class SpockbotsColorSensor:
         """
         if number == 2:
             self.sensor = ColorSensor(INPUT_2)
-        
+        if number == 3:
+            self.sensor = ColorSensor(INPUT_3)
+        if number == 1:
+            self.sensor = ColorSensor(INPUT_1)
+        if number == 4:
+            self.sensor = ColorSensor(INPUT_4)
+
         self.number = number
         self.black = 1000
         self.white = 0
@@ -89,7 +95,7 @@ class SpockbotsColorSensors:
 
     def __init__(self):
         self.colorsensor = [0,0,0,0,0]
-        for i in [2]:
+        for i in [4]:
             self.colorsensor[i] = SpockbotsColorSensor(i)
 
     def value(i):
